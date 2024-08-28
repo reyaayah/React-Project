@@ -1,0 +1,26 @@
+#center-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+}
+#button{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: aqua;
+    display: flex;
+    font-size: 25px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.buttonminus{
+    right: 100px !important;
+}

@@ -1,4 +1,5 @@
 import "../styles/navbar_styles.css";
+import { Link } from "react-router-dom";
 const Navbar=({title})=>{
     return(
         <>
@@ -9,11 +10,12 @@ const Navbar=({title})=>{
           </div>
         
         <div id='menus'>
-          <p><link href="../pages/home.jsx"></link>Home</p>
-          <p>Documents</p>
-          <p>settings</p>
-          <p>Profile</p>
-          <p>Downloads</p>
+          <p><Link to="/">Home</Link></p>
+        
+          <p><Link to="/documents">Documents</Link></p>
+          <p><Link to="/settings">Settings</Link></p>
+          <p><Link to="/profile">Profile</Link></p>
+          <p><Link to="/downloads">Downloads</Link></p>
         </div>
         </div>
         </>
