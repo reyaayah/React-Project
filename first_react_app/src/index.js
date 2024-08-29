@@ -10,6 +10,7 @@ import Profile from './pages/profile';
 import Settings from './pages/settings';
 import App from './App';
 import Documents from './pages/documents';
+import Login from './pages/login';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,6 +21,7 @@ root.render(
       <Route path='/' element={<App/>}>
         <Route index element={<Home/>}/>
         <Route path="downloads" element={<Downloads/>}/>
+        <Route path="login" element={<Login/>}/>
         <Route path="documents" element={<Documents/>}/>
         <Route path="profile" element={<Profile/>}/>
         <Route path="settings" element={<Settings/>}/>
