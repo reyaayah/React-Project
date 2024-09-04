@@ -1,28 +1,47 @@
-import Navbar from "../components/navbar"
-import "../styles/home.css"
+import { useState } from "react";
+import Navbar from "../components/navbar";
+import CustomFormField from "../components/CustomFormField";
+import "../styles/login.css"
+const Login = () => {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const handleSubmit = () => {
+        console.log("email = ", email)
+        console.log("password = ",password)
+    }
+    const handleEmailChange = (event) => {
+        setEmail(event.target.value)
+    }
+    const handlePasswordChange = (event) => {
+        setPassword(event.target.value)
+    }
+    return (
+        <form>
+            <Navbar title={"Login"} />
+            <div id="login-box">
 
-const Login=()=>{
-    return(
-        <>
-        <Navbar title={"login"}/>
-        <h1>login Page</h1>
-        <form action="">
-            <div id="form-box">
-            <div>
-                <p>Email</p>
-                <input type="text" placeholder="Enter your name" />
+                <h1>LOGIN</h1>
+                <CustomFormField
+                    label="Email"
+                    cName="email"
+                    placeholder="Enter your email"
+                    type="email"
+                    value={email}
+                    onChange={handleEmailChange}
+
+                />
+                <CustomFormField
+                    label="Password"
+                    cName="password"
+                    placeholder="Enter your password"
+                    type="password"
+                    value={password}
+                    onChange={handlePasswordChange}
+                />
+
+                <div id="login-button" onClick={handleSubmit}>Login</div>
             </div>
-            <div>
-                <p>Password</p>
-                <input type="text" placeholder="Enter your password" />
-            </div>
-            <div>
-                <button>Login</button>
-            </div>
-            </div>
-           
         </form>
-        </>
     );
 }
 export default Login
