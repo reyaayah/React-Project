@@ -1,11 +1,20 @@
 import { useState } from "react";
-import Navbar from "../components/navbar";
 import CustomFormField from "../components/CustomFormField";
 import "../styles/login.css"
+import { Link } from "react-router-dom";
 const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if(email.length==0){
+            alert("Please enter email");
+            return
+        }
+        if(password.length<6){
+            alert("Please enter a strong password.")
+            return
+        }
         console.log("email = ", email)
         console.log("password = ",password)
     }
@@ -16,8 +25,7 @@ const Login = () => {
         setPassword(event.target.value)
     }
     return (
-        <form>
-            <Navbar title={"Login"} />
+        <form onSubmit={handleSubmit}>
             <div id="login-box">
 
                 <h1>LOGIN</h1>
@@ -38,8 +46,14 @@ const Login = () => {
                     value={password}
                     onChange={handlePasswordChange}
                 />
-
-                <div id="login-button" onClick={handleSubmit}>Login</div>
+{/* 
+                <div id="login-button" onClick={handleSubmit}>Login</div> */}
+                <div id="login-button">
+                    <input type="submit" value="login" />
+                </div>
+                <div id="signup-field">
+                    <p>Don't have an account? <Link to="/register">SignUp</Link></p>
+                </div>
             </div>
         </form>
     );
