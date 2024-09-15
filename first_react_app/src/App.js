@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
+import UserCard from './components/UserCard';
 import { Outlet } from 'react-router-dom';
+
+
 
 function App() {
 
   return (
-    <div className='App'>
-     <Outlet/>
-    </div>
-  );
-}
-export function Title(){
-  return(
-    <div>
-      <h1>title</h1>
-    </div>
-
-
+   <>
+   <Outlet/>
+   </>
   );
 }
 export default App;
