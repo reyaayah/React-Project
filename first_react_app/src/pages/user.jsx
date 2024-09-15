@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react'
-import '../styles/user.css'
-import UserCard from '../components/UserCard'
+import "../styles/user.css"
+import UserCard from '../components/UserCard';
 const Users=()=>{
     const [allUsers,setAllUsers]=useState([])
-    //if set to [], called once in each render
+    //if set to mpty array [], called once in each render
     useEffect(
         ()=>{
-            fetch("https://jsonplaceholder.typicode.com/users").then( //kaile respose aauxa thahunna so then use garne ani res aayesi call hunxa
+            fetch("https://jsonplaceholder.typicode.com/users").then( //kaile respose aauxa thahunna so then use garne ani response aayesi call hunxa
                 async(res)=>{
                     const users=await res.json()
                     console.log("users:",users)
-                    setAllUsers(()=>users)
+                    setAllUsers(users)
                 }
             ) 
         },
@@ -24,13 +24,13 @@ const Users=()=>{
                     //.map()=> loop + return
                     allUsers.map(
                         (user)=>{
-                            return <UserCard/>
+                            return <UserCard user={user}/>
                         }
                     )
                 }
 
             </div>
         </div>
-    )
+    );
 }
 export default Users

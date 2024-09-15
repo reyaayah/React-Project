@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import HomePage from './home_page';
 import Home from './pages/home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Downloads from './pages/downloads';
@@ -12,7 +11,6 @@ import App from './App';
 import Documents from './pages/documents';
 import Login from './pages/login';
 import Register from './pages/register';
-import UserCard from './components/UserCard';
 import Users from './pages/user';
 
 
@@ -29,7 +27,7 @@ root.render(
         <Route path="profile" element={<Profile/>}/>
         <Route path="settings" element={<Settings/>}/>
         <Route path="register" element={<Register/>}/>
-        <Route path="user" element={<Users/>}/>
+        <Route path="usercard" element={<Users/>}/>
       </Route>
     </Routes>
    </BrowserRouter>

@@ -12,7 +12,7 @@ const Register=()=>{
     const [gender, setGender] = useState("")
     const handleSubmit = (event) => {
         event.preventDefault();
-        if(email.length==0){
+        if(email.length===0){
             alert("Please enter email");
             return
         }
@@ -20,7 +20,7 @@ const Register=()=>{
             alert("Please enter a strong password.")
             return
         }
-        if(password==confirmpassword){
+        if(password===confirmpassword){
             alert("Password doesnot match")
             return
         }

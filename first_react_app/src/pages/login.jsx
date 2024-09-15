@@ -7,7 +7,7 @@ const Login = () => {
     const [password, setPassword] = useState("")
     const handleSubmit = (event) => {
         event.preventDefault();
-        if(email.length==0){
+        if(email.length===0){
             alert("Please enter email");
             return
         }

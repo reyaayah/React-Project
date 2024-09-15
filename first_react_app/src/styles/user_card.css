@@ -2,18 +2,20 @@
     margin:0;
     padding:0;
 }
-.card-container{
-    border: 2 px solid blue;
+#card-container{
+    border: 2px solid rgb(20, 20, 25);
     max-width: 400px;
-    /* margin-top: 20px; */
-    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
     overflow: hidden;
 }
-.header{
-    background-color: blue;
-  color: white;
+#header{
+    background-color: rgb(118, 118, 215);
+    width: 100%;
     text-align: center;
-    
+    align-items: center;
 }
 #con{
     padding: 20px;
